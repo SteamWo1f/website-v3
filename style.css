@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #23333e; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #354a58; 
+    border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #455e6e; 
+}
+
+* {
+    font-family: 'Lexend Deca', serif;
+}
+
+h1 {
+    color: #dc7f42
+}
+
+h2 {
+    color: #f29659
+}
+
+h3 {
+    color: #ffb07b
+}
+
+p {
+    color: #ffd5ba
+}
+
+.p2 {
+    color: #ffe9db
+}
+
+a {
+    color: #ff904a
+}
+
+.logo {
+    margin-top: 40px;
+    width: 85vmin;
+    height: auto;
+}
+
+
+.logo-subtext {
+    font-size: medium;
+}
+
+body {
+    background-color: #23333e;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li button.nav-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: large;
+    
+}
+
+@media screen and (max-width: 500px){
+    
+    nav li button.nav-btn a {
+        display: block;
+        color: #ffd5ba;
+        text-align: center;
+        padding: 10px 10px !important; 
+        text-decoration: none;
+        margin: 6px;
+    }
+}
+
+nav li button.nav-btn a {
+    display: block;
+    color: #ffd5ba;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 6px;
+}
+
+nav li button.nav-btn a:hover {
+    background-color: #151e24;
+    border-radius:  100px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #324958;
+    border-radius: 25px;
+}
+
+.about {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: left;
+    background-color: #152027;
+}
+
+.about h2 {
+    font-size: 2.0rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    font-size: 1.0rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-text {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(1,  1fr);
+    gap: 10px;
+    text-align: center;
+}
