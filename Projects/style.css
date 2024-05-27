@@ -81,7 +81,7 @@ header {
     }
     
     nav ul {
-        min-width: 70vw;
+        min-width: 300px;
         list-style-type: none;
         margin: 10px;
         padding: 0;
