@@ -80,7 +80,6 @@ nav li button.nav-btn {
     padding: 0;
     cursor: pointer;
     font-size: large;
-    
 }
 
 @media screen and (max-width: 500px){
@@ -124,6 +123,11 @@ nav li button.nav-btn a {
     padding: 10px 20px;
     text-decoration: none;
     margin: 6px;
+}
+
+nav li button.nav-btn a:active {
+    background-color: #151e24;
+    border-radius:  100px;
 }
 
 nav li button.nav-btn a:hover {

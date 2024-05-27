@@ -177,6 +177,11 @@ nav li button.nav-btn a {
     margin: 6px;
 }
 
+nav li button.nav-btn a:active {
+    background-color: #151e24;
+    border-radius:  100px;
+}
+
 nav li button.nav-btn a:hover {
     background-color: #151e24;
     border-radius:  100px;
