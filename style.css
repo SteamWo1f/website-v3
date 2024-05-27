@@ -52,7 +52,6 @@ a {
     height: auto;
 }
 
-
 .logo-subtext {
     font-size: medium;
 }
@@ -70,6 +69,22 @@ header {
     text-align: center;
 }
 
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+nav ul {
+    max-width: 1000px;
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #324958;
+    border-radius: 25px;
+}
+
 nav li {
     display: inline-block;
 }
@@ -80,40 +95,7 @@ nav li button.nav-btn {
     padding: 0;
     cursor: pointer;
     font-size: large;
-}
-
-@media screen and (max-width: 500px){
-
-    nav li button.nav-btn {
-        justify-content: center;
-        align-items: center;  
-        text-align: center;
-        background: none;
-        border: none;
-        padding-left: 10px;
-        padding-right: 10px;
-        cursor: pointer;
-        font-size: large;
-    }
     
-    nav ul {
-        min-width: 300px;
-        list-style-type: none;
-        margin: 10px;
-        padding: 0;
-        overflow: hidden;
-        background-color: #324958;
-        border-radius: 25px;
-    }
-    
-    nav li button.nav-btn a {
-        display: block;
-        color: #ffd5ba;
-        text-align: center;
-        padding: 10px 10px !important; 
-        text-decoration: none;
-        margin: 6px;
-    }
 }
 
 nav li button.nav-btn a {
@@ -135,20 +117,27 @@ nav li button.nav-btn a:hover {
     border-radius:  100px;
 }
 
-.nav-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-}
+@media screen and (max-width: 500px){
 
-nav ul {
-    max-width: 1000px;
-    list-style-type: none;
-    margin: 10px;
-    padding: 0;
-    overflow: hidden;
-    background-color: #324958;
-    border-radius: 25px;
+    nav li button.nav-btn {
+        justify-content: center;
+        align-items: center;  
+        text-align: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: large;
+    }
+    
+    nav ul {
+        min-width: 300px;
+        list-style-type: none;
+        margin: 10px;
+        padding: 0;
+        overflow: hidden;
+        background-color: #324958;
+        border-radius: 25px;
+    }
 }
 
 .about {
