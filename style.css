@@ -168,7 +168,22 @@ nav li button.nav-btn a:hover {
     border-radius:  100px;
 }
 
-@media screen and (max-width: 300px){
+@media screen and (max-width: 480px){ 
+
+    .social-grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 17px;
+}
+
+    .music-slideshow {
+        display: grid;
+        grid-template-columns: repeat(1, 3fr) !important; 
+        grid-template-rows: repeat(1, 1fr); /* Change to 2, 1fr for 3 more cards */
+        overflow-x: visible;
+    }
 
     nav li button.nav-btn {
         justify-content: center;
@@ -181,7 +196,6 @@ nav li button.nav-btn a:hover {
     }
     
     nav ul {
-        min-width: 300px;
         list-style-type: none;
         margin: 10px;
         padding: 0;
@@ -189,7 +203,9 @@ nav li button.nav-btn a:hover {
         background-color: #324958;
         border-radius: 25px;
     }
+
 }
+
 
 .soc-about {
     max-width: 950px;
