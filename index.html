@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SteamWolf</title>
     <link rel="stylesheet" href="https://steamwolf.cc/style.css">
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 </head>
 <body>
     <nav class="nav-container">
         <ul>
             <li><button class="nav-btn"><a href="https://steamwolf.cc">Home</a></button></li>
-            <li><button class="nav-btn"><a href="https://steamwolf.cc/links">Links</a></button></li>
             <li><button class="nav-btn"><a href="https://steamwolf.cc/projects">Projects</a></button></li>
         </ul>
     </nav>
@@ -21,13 +21,98 @@
         <h3 class="logo-subtext">Developer | Audio-Visual Producer & Editor</h3>
     </header>
 
-
+    <div class="soc-about">
+        <h3>
+            <span class="socials"></span>
+                <div class="social-grid">
+                    <div class="social-grid">
+                        <iconify-icon 
+                            class="social-icons" 
+                            icon="tabler:brand-twitter" 
+                            style="color: #ffb07b"
+                            data-tooltip="Twitter"
+                            data-link="https://x.com/SteamWo1f"
+                        ></iconify-icon>
+                        <iconify-icon 
+                            class="social-icons" 
+                            icon="tabler:brand-github" 
+                            style="color: #ffb07b"
+                            data-tooltip="GitHub"
+                            data-link="https://github.com/SteamWo1f"
+                        ></iconify-icon>
+                        <iconify-icon 
+                            class="social-icons" 
+                            icon="tabler:brand-bluesky" 
+                            style="color: #ffb07b"
+                            data-tooltip="Bluesky"
+                            data-link="https://bsky.app/profile/steamwolf.cc"
+                        ></iconify-icon>
+                        <iconify-icon 
+                            class="social-icons" 
+                            icon="tabler:brand-spotify"
+                            style="color: #ffb07b"
+                            data-tooltip="Spotify"
+                            data-link="https://open.spotify.com/artist/5JGLhuu4PrZ3XpRHoElokK?si=rql1Ww3wT6KMyiqlslzNRQ"
+                        ></iconify-icon>
+                        <iconify-icon 
+                            class="social-icons" 
+                            icon="tabler:brand-bandcamp" 
+                            style="color: #ffb07b"
+                            data-tooltip="Bandcamp"
+                            data-link="https://steamwolf.bandcamp.com"
+                        ></iconify-icon>
+                        <iconify-icon 
+                            class="social-icons" 
+                            icon="tabler:brand-youtube" 
+                            style="color: #ffb07b"
+                            data-tooltip="YouTube"
+                            data-link="https://www.youtube.com/@SteamWo1f"
+                        ></iconify-icon>
+                        <iconify-icon 
+                            class="social-icons" 
+                            icon="tabler:brand-reddit" 
+                            style="color: #ffb07b"
+                            data-tooltip="Reddit"
+                            data-link="https://www.reddit.com/user/SteamWo1f"
+                        ></iconify-icon>
+                        <iconify-icon 
+                            class="social-icons" 
+                            icon="tabler:brand-tumblr" 
+                            style="color: #ffb07b"
+                            data-tooltip="Tumblr"
+                            data-link="https://www.tumblr.com/steamwo1f"
+                        ></iconify-icon>
+                        <iconify-icon 
+                            class="social-icons" 
+                            icon="tabler:brand-paypal" 
+                            style="color: #ffb07b"
+                            data-tooltip="PayPal"
+                            data-link="https://www.paypal.com/paypalme/SteamWo1f"
+                        ></iconify-icon>
+                        <iconify-icon 
+                            class="social-icons" 
+                            icon="tabler:coffee" 
+                            style="color: #ffb07b"
+                            data-tooltip="Buy Me a Coffee"
+                            data-link="https://ko-fi.com/steamwolf"
+                        ></iconify-icon>
+                        <iconify-icon 
+                            class="social-icons" 
+                            icon="tabler:mail" 
+                            style="color: #ffb07b"
+                            data-tooltip="Email"
+                            data-link="mailto:steamwolf.121.business@gmail.com"
+                        ></iconify-icon>
+                    </div>
+                </div>
+        </h3>
+    </div>
+    <br>
     <div class="about">
-        <p>Hello there</p>
-        <p>My name is SteamWolf and welcome to this here corner of the internet.</p>
-        <p>I enjoy working with computers, from managing my home server & working with code to creating music with Ableton.</p>
-        <p>If you are curious about anything I do, you can find me around the Internet from my <a href="https://steamwolf.cc/links" target="_blank">Links</a> page,</p>
-        <p>or you can take a look at the current <a href="https://steamwolf.cc/projects" target="_blank">Projects</a> that I am working on.</p>
+        <p>Good Afternoon:</p>
+        <p>I'm SteamWolf and welcome to this here corner of the internet.</p>
+        <p>I enjoy working with computers, Be that from managing my home server to creating music with Ableton.</p>
+        <p>You can take a look at the current <a href="https://steamwolf.cc/projects" target="_blank">Projects</a> that I am working on, You can also find me from the links on the page.</p>
         <p>Thank you for taking a interest in who I am and what I do,</p>
         <p>I hope you have a good day.</p>
     </div>
@@ -40,5 +125,22 @@
             </div>
         </div>
     </footer>
+<script>
+    document.addEventListener('click', function(e) {
+        const socialIcons = e.target.closest('.social-icons');
+        if (socialIcons) {
+            const icons = document.querySelectorAll('.social-icons');
+            icons.forEach(icon => {
+                icon.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    const link = this.getAttribute('data-link');
+                    if (link) {
+                        window.open(link, '_blank');
+                    }
+                });
+            });
+        }
+    });
+</script>
 </body>
 </html>
