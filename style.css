@@ -168,7 +168,7 @@ nav li button.nav-btn a:hover {
     border-radius:  100px;
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 300px){
 
     nav li button.nav-btn {
         justify-content: center;
@@ -210,6 +210,66 @@ nav li button.nav-btn a:hover {
     border-radius: 10px;
     text-align: left;
     background-color: #152027;
+}
+
+.music-text {
+    font-size: xx-large;
+    text-align: center;
+}
+
+.music {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: left;
+    background-color: #152027;
+}
+
+.music-slideshow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr); /* Change to 2, 1fr for 3 more cards */
+    overflow-x: visible;
+}
+
+.music-slideshow::-webkit-scrollbar {
+    display: none;
+}
+
+.music-card {
+    flex: 0 0 270px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.750);
+    color: #23333e;
+    transition: transform 0.3s ease-in-out;
+}
+
+.music-card:hover {
+    transform: translateY(-5px);
+}
+
+.music-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.music-info {
+    margin-top: 10px;
+}
+
+.music-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.music-artist {
+    font-size: 1em;
+    color: #ccc;
 }
 
 .about h2 {

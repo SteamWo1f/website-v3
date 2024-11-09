@@ -116,6 +116,24 @@
         <p>Thank you for taking a interest in who I am and what I do,</p>
         <p>I hope you have a good day.</p>
     </div>
+    <br>
+    <div class="music">
+        <h1 class="music-text">Music:</h1>
+        <div class="music-slideshow">
+            <div class="music-card">
+                <img src="https://f4.bcbits.com/img/a2957700856_16.jpg" alt="Album Cover">
+                <div class="music-info">
+                    <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=2070127354/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=none/transparent=true/" seamless><a href="https://steamwolf.bandcamp.com/track/bleeding-nostalgia">Bleeding Nostalgia by SteamWolf</a></iframe>
+                </div>
+            </div>
+            <div class="music-card">
+                <img src="https://f4.bcbits.com/img/a3188627306_16.jpg" alt="Album Cover">
+                <div class="music-info">
+                    <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=251047366/size=large/bgcol=333333/linkcol=4ec5ec/tracklist=false/artwork=none/transparent=true/" seamless><a href="https://steamwolf.bandcamp.com/track/teal-stars">Teal Stars by SteamWolf</a></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-text">
@@ -126,21 +144,33 @@
         </div>
     </footer>
 <script>
-    document.addEventListener('click', function(e) {
-        const socialIcons = e.target.closest('.social-icons');
-        if (socialIcons) {
-            const icons = document.querySelectorAll('.social-icons');
-            icons.forEach(icon => {
-                icon.addEventListener('click', function(event) {
-                    event.stopPropagation();
-                    const link = this.getAttribute('data-link');
-                    if (link) {
+document.addEventListener('DOMContentLoaded', function() {
+        const socialIcons = document.querySelectorAll('.social-icons');
+        
+        socialIcons.forEach(icon => {
+            let isOpen = false;
+            
+            icon.addEventListener('click', function(event) {
+                event.preventDefault();
+                
+                const link = this.getAttribute('data-link');
+                if (!link) return;
+    
+                if (!isOpen) {
+                    window.open(link, '_blank');
+                    isOpen = true;
+                } else {
+                    if (window.location.href.includes(link)) {
+                        window.close();
+                        isOpen = false;
+                    } else {
                         window.open(link, '_blank');
+                        isOpen = true;
                     }
-                });
+                }
             });
-        }
-    });
+        });
+});
 </script>
 </body>
 </html>

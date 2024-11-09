@@ -114,8 +114,9 @@ nav li button.nav-btn a:hover {
     border-radius:  100px;
 }
 
-@media screen and (max-width: 500px){
-    
+
+@media screen and (max-width: 300px){
+
     nav li button.nav-btn {
         justify-content: center;
         align-items: center;  
@@ -135,7 +136,6 @@ nav li button.nav-btn a:hover {
         background-color: #324958;
         border-radius: 25px;
     }
-    
 }
 
 .nav-grid a {
