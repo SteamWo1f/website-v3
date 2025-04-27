@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 
+:root {
+    color-scheme: dark;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -44,6 +48,55 @@ p {
 
 a {
     color: #ff904a
+}
+
+body {
+    background-color: #23333e;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    margin-top: 40px;
+    width: 85vmin;
+    height: auto;
+}
+
+.logo-subtext {
+    font-size: medium;
+}
+
+@media screen and (max-width: 680px){ 
+
+    .social-grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 17px;
+    }
+
+    .music-slideshow {
+        display: grid;
+        grid-template-columns: repeat(1, 3fr) !important; 
+        grid-template-rows: repeat(1, 1fr); /* Change to 2, 1fr for 3 more cards */
+        overflow-x: visible;
+    }
+
+    .projects-slideshow {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr) !important;
+        grid-template-rows: repeat(1, 1fr); /* Change to 2, 1fr for 3 more cards */
+        overflow-x: visible;
+    }
+
 }
 
 .social-grid {
@@ -93,119 +146,9 @@ a {
     cursor: pointer;
 }
 
-.logo {
-    margin-top: 40px;
-    width: 85vmin;
-    height: auto;
-}
-
 .socials {
     color: #ffb07b;
 }
-
-.logo-subtext {
-    font-size: medium;
-}
-
-body {
-    background-color: #23333e;
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    text-align: center;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-}
-
-nav ul {
-    max-width: 1000px;
-    list-style-type: none;
-    margin: 10px;
-    padding: 0;
-    overflow: hidden;
-    background-color: #324958;
-    border-radius: 25px;
-}
-
-nav li {
-    display: inline-block;
-}
-
-nav li button.nav-btn {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    font-size: large;
-    
-}
-
-nav li button.nav-btn a {
-    display: block;
-    color: #ffd5ba;
-    text-align: center;
-    padding: 10px 20px;
-    text-decoration: none;
-    margin: 6px;
-}
-
-nav li button.nav-btn a:active {
-    background-color: #151e24;
-    border-radius:  100px;
-}
-
-nav li button.nav-btn a:hover {
-    background-color: #151e24;
-    border-radius:  100px;
-}
-
-@media screen and (max-width: 480px){ 
-
-    .social-grid {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 17px;
-}
-
-    .music-slideshow {
-        display: grid;
-        grid-template-columns: repeat(1, 3fr) !important; 
-        grid-template-rows: repeat(1, 1fr); /* Change to 2, 1fr for 3 more cards */
-        overflow-x: visible;
-    }
-
-    nav li button.nav-btn {
-        justify-content: center;
-        align-items: center;  
-        text-align: center;
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: large;
-    }
-    
-    nav ul {
-        list-style-type: none;
-        margin: 10px;
-        padding: 0;
-        overflow: hidden;
-        background-color: #324958;
-        border-radius: 25px;
-    }
-
-}
-
 
 .soc-about {
     max-width: 950px;
@@ -228,13 +171,53 @@ nav li button.nav-btn a:hover {
     background-color: #152027;
 }
 
+.music-icon:hover {
+    border-color: #ffb07b;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 6px 16px;
+    font-size: 24px; 
+    color: #ffb07b;
+/*    transform: translateY(-5px); */
+/*    transition: transform 0.1s ease-in-out; */
+}
+
+.music-icon {
+    border-color: #ffd5ba;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 6px 16px;
+    font-size: 24px; 
+    color: #ffd5ba;
+}
+
+.button-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.music-cc {
+    text-align: center;
+    font-size: smaller;
+    padding-top: 2%;
+}
+
+.music-info {
+    color: #ffb07b !important;
+    margin-top: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: larger;
+}
+
 .music-text {
     font-size: xx-large;
     text-align: center;
 }
 
 .music {
-    max-width: 960px;
+    max-width: 950px;
     margin: 0 auto;
     padding: 2rem;
     border-radius: 10px;
@@ -244,7 +227,7 @@ nav li button.nav-btn a:hover {
 
 .music-slideshow {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr); /* Change to 2, 1fr for 3 more cards */
     overflow-x: visible;
 }
@@ -258,23 +241,19 @@ nav li button.nav-btn a:hover {
     margin: 10px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.750);
     color: #23333e;
-    transition: transform 0.3s ease-in-out;
+/*    transition: transform 0.3s ease-in-out; */
+    background-color: #23333E;
 }
 
-.music-card:hover {
-    transform: translateY(-5px);
-}
+/* .music-card:hover { */
+/*    transform: translateY(-5px); */
+/* } */
 
 .music-card img {
     width: 100%;
     height: auto;
     border-radius: 5px;
-}
-
-.music-info {
-    margin-top: 10px;
 }
 
 .music-title {
@@ -283,9 +262,61 @@ nav li button.nav-btn a:hover {
     color: #fff;
 }
 
-.music-artist {
-    font-size: 1em;
-    color: #ccc;
+.projects {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: left;
+    background-color: #152027;
+}
+
+.projects-text {
+    font-size: xx-large;
+    text-align: center;
+}
+
+.projects-slideshow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr); /* Change to 2, 1fr for 3 more cards */
+    overflow-x: visible;
+}
+
+.projects-card {
+    flex: 0 0 270px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    color: #23333e;
+/*    transition: transform 0.3s ease-in-out; */
+    background-color: #23333E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-header {
+    color: #ffb07b;
+    margin-top: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: x-large;
+}
+
+.projects-info {
+    color: #ffd5ba;
+    margin-top: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: large;
+}
+
+.projects-logo {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
 .about h2 {
