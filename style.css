@@ -31,11 +31,11 @@ h1 {
 }
 
 h2 {
-    color: #f29659
+    color: #ffd5ba
 }
 
 h3 {
-    color: #ffb07b
+    color: #ffd5ba
 }
 
 p {
@@ -43,7 +43,7 @@ p {
 }
 
 .p2 {
-    color: #ffe9db
+    color: #ffd5ba
 }
 
 a {
@@ -51,8 +51,15 @@ a {
 }
 
 body {
-    background-color: #23333e;
+    background-image: url("/assets/bg.png");
+    background-size: 250px;
+    animation: bg 60s linear infinite;
 }
+@keyframes bg {
+    0% {background-position: top right;}
+    100% {background-position: bottom left;}
+}
+
 
 header {
     display: flex;
@@ -132,7 +139,7 @@ header {
 }
 
 .social-icons {
-    color: #ffb07b;
+    color: #ffd5ba;
     padding-left: 5px;
     padding-right: 5px;
     transition: all 0.3s ease;
@@ -140,6 +147,8 @@ header {
 
 .social-icons:hover {
     cursor: pointer;
+    border-color: #ffb07b;
+    color: #ffb07b;
 }
 
 .social-icons:hover::after {
@@ -204,7 +213,7 @@ header {
 }
 
 .music-info {
-    color: #ffb07b !important;
+    color: #dc7f42 !important;
     margin-top: 10px;
     text-align: center;
     padding-bottom: 10px;
