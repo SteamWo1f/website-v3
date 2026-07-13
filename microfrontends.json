@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/microfrontends.json",
+  "applications": {
+    "website-v3": {
+      "development": {
+        "fallback": "steamwolf.cc"
+      }
+    },
+    "optimized-oasis-site": {
+      "routing": [
+        {
+          "paths": ["/optimized-oasis/:path*"]
+        }
+      ]
+    }
+  }
+}
